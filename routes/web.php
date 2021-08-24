@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\DashboardTokoController;
+use App\Http\Controllers\Landing;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('landing');
+// });
+
+Route::get('/', [Landing::class, 'landing']);
+Route::get('user', [DashboardTokoController::class, 'dashboardToko'])->name('dashboard');
+Route::get('produk', [DashboardTokoController::class, 'produkToko'])->name('produk');
+Route::get('tambah-produk', [DashboardTokoController::class, 'tambahProduk'])->name('tambah-produk');
+Route::get('profile-toko', [DashboardTokoController::class, 'profileToko'])->name('profile-toko');

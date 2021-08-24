@@ -1,9 +1,10 @@
-<?php
-include('layouts/header.php');
-include('layouts/navbar.php');
-include('layouts/sidebar.php')
-?>
+@extends('toko.layouts.toko')
 
+@section('title')
+    Dashboard User
+@endsection
+
+@section('content')
 <div class="main-content">
     <section class="section">
         <div class="row">
@@ -54,8 +55,5 @@ include('layouts/sidebar.php')
             </div>
         </div>
     </section>
-</div>
-
-<?php
-include('layouts/footer.php')
-?>
+</div> 
+@endsection

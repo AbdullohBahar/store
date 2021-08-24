@@ -1,9 +1,9 @@
-<?php include('layouts/header.php');
-include('layouts/navbar.php');
-include('layouts/sidebar.php')
-?>
+@extends('toko.layouts.toko')
+@section('title')
+    Produk
+@endsection
 
-<!-- Main Content -->
+@section('content')
 <div class="main-content">
     <section class="section">
         <div class="section-header">
@@ -15,7 +15,7 @@ include('layouts/sidebar.php')
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <a href="create.php" class="btn btn-primary ml-auto">Tambah Produk</a>
+                            <a href="{{ route('tambah-produk') }}" class="btn btn-primary ml-auto">Tambah Produk</a>
                         </div>
                         <div class="card-body p-0">
                             <div class="table-responsive">
@@ -45,6 +45,4 @@ include('layouts/sidebar.php')
         </div>
     </section>
 </div>
-
-
-<?php include('layouts/footer.php') ?>
+@endsection

@@ -1,9 +1,10 @@
-<?php
-include('layouts/header.php');
-include('layouts/navbar.php');
-include('layouts/sidebar.php')
-?>
+@extends('toko.layouts.toko')
 
+@section('title')
+    Edit Profile
+@endsection
+
+@section('content')
 <div class="main-content">
     <section class="section">
         <div class="section-header">
@@ -62,7 +63,4 @@ include('layouts/sidebar.php')
         </div>
     </section>
 </div>
-
-<?php
-include('layouts/footer.php')
-?>
+@endsection
